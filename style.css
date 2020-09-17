@@ -11,6 +11,7 @@ body {
     height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
     color: rgb(var(--color));
+    background-color: #ecfffb;
 }
 * {
     list-style: none;
@@ -40,7 +41,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: #fff;
+    background: #9ac5c5;
     padding-bottom: 10px;
     border-radius: 0 0 40px 40px;
 }
@@ -106,7 +107,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: tomato;
+    background: #1e6262;
     margin-bottom: 16px;
     border-radius: 25px;
     position: relative;
