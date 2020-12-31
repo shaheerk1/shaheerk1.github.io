@@ -82,7 +82,7 @@ header{
 
 
 footer {
-	padding-top: 10px;
+	
     font-family: monospace;
 	text-align: center;
 	background-color: rgb(66, 66, 66);
@@ -289,6 +289,10 @@ footer {
     #nav.active {
         display: flex;
     }
+	 
+  footer {
+	padding-top: 20px;
+	  }
 
   }
 
