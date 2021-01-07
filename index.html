@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body style="background-image: url(images/pattern2.jpg)">
+    <header>
+      <img class="logo" src="./images/logo3.png" alt="logo" />
+
+      <a href="#" id="ham" class="toggleButton"
+        ><img class="ham-icon" src="images/ham.png" alt="ham"
+      /></a>
+
+      <nav id="nav">
+        <ul class="navdesktop">
+          <li><a href="#">Home</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="section1">
+        <div class="intro-container">
+          <div class="intro-left">
+            <img class="profilejpg" src="images/potrait1.png" alt="me" />
+          </div>
+          <div class="intro-right">
+            <h1 class="textName">
+              Hi, I'm <span class="semitextName">Shahir</span>
+            </h1>
+            <div class="typewriter">
+              <h1>I'm a Designer & Developer.</h1>
+            </div>
+            <p class="semiText">CSS / JavaScript</p>
+            <a class="contactLink" href="#">CONTACT ME</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="section2" id="works">
+      <div class="card-container">
+        <div class="card-wrapper">
+          <div class="card card-one">
+            <a href="https://halfstackto.github.io/weather-with-api/"
+              ><img
+                class="card-image"
+                src="./images/weather.jpg"
+                alt="weather app"
+              />
+            </a>
+            <a href="https://halfstackto.github.io/weather-with-api/"
+              ><h3 class="card-title">A weather app using vanilla JS</h3></a
+            >
+            <a href="https://halfstackto.github.io/weather-with-api/"
+              ><p class="card-description">
+                I made this Using the openweathermap API. This will ask you for
+                location permission on your device.
+              </p></a
+            >
+          </div>
+          <div class="card card-two">
+            <a href="https://shahirsonlineshop.herokuapp.com/"
+              ><img
+                class="card-image"
+                src="./images/Shopless.jpg"
+                alt="weather app"
+              />
+            </a>
+            <a href="https://shahirsonlineshop.herokuapp.com/"
+              ><h3 class="card-title">A MERN stack shopping cart app</h3></a
+            >
+            <a href="https://shahirsonlineshop.herokuapp.com/"
+              ><p class="card-description">
+                I made this following along with an Udemy course click to visit
+                the site.
+              </p></a
+            >
+          </div>
+          <div class="card card-three">
+            <a href="https://codepen.io/ShahirK/pen/ExKREYE"
+              ><img
+                class="card-image"
+                src="./images/instagram-icon.jpg"
+                alt="weather app"
+              />
+            </a>
+            <a href="https://codepen.io/ShahirK/pen/ExKREYE"
+              ><h3 class="card-title">Instagram logo using pure CSS</h3></a
+            >
+            <a href="https://codepen.io/ShahirK/pen/ExKREYE"
+              ><p class="card-description">
+                It uses two divs you can see the code in my codepen.
+              </p></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="container">
+          <p class="address">21100, Dambulla <br />Sri Lanka</p>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
