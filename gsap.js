@@ -25,7 +25,8 @@ window.onload = function () {
     .to(ruleBg2, { duration: 0.4, cssRule: { scaleX: 0, ease: "power2.out" } })
     .from(".reveal-text", 0.3, { opacity: 0, y: 50 })
     .from(".header-sub", 0.3, { opacity: 0, y: 50 }, "-=0.3")
-    .from(".header-link", 0.3, { opacity: 0, y: 50 }, "-=0.3");
+    .from(".header-link", 0.3, { opacity: 0, y: 50 }, "-=0.3")
+    .from(".profilePic", 0.3, { opacity: 0, y: 50 }, "-=0.3");
 
   var worksHead1 = CSSRulePlugin.getRule(".reveal-work-header:before");
   var worksHead2 = CSSRulePlugin.getRule(".reveal-work-header:after");
