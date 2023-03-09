@@ -1,7 +1,3 @@
-// setTimeout(function () {
-//   $(".loader-bg").fadeToggle();
-// }, 1500);
-
 const menuButton = document.getElementById("hamButton");
 const navContainer = document.getElementById("navContainer");
 const menuText = document.getElementById("menuText");

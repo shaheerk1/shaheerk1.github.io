@@ -37,73 +37,57 @@ a{
 
 
 /*==================================loader=======================================*/
-
-.loader-bg {
+  
+  .loader-bg {
     position: fixed;
     z-index: 999999;
     background: var(--dark);
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
+  .loader-line {
+    width: 50%;
+    height: 3px;
+    position: relative;
+    overflow: hidden;
+    background-color: #bbbbbb;
+    margin: 100px auto;
+    border-radius: 20px;
+}
 
-  
-  @keyframes loader {
+.loader-line:before {
+    content: "";
+    position: absolute;
+    left: -50%;
+    height: 3px;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    -webkit-animation: lineAnim 1s linear infinite;
+    -moz-animation: lineAnim 1s linear infinite;
+    animation: lineAnim 1s linear infinite;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+@keyframes lineAnim {
     0% {
-      left: 0;
-      top: 0;
-    }
-    25% {
-      left: 0;
-      top: 60px;
+        left: -40%;
     }
     50% {
-      left: 60px;
-      top: 60px;
+        left: 20%;
+        width: 80%;
     }
-    75% {
-      left: 60px;
-      top: 0;
-    }
-  
     100% {
-      left: 0;
-      top: 0;
+        left: 100%;
+        width: 100%;
     }
-  }
-  
+}
 
-  #loaderAnimation {
-    margin: 100px auto;
-    width: 80px;
-    height: 80px;
-    border: 15px solid #727272;
-    border-top: 16px solid var(--whitish);
-    border-radius: 50%;
-    animation: spin 2s linear infinite, heart-beat 2s linear infinite;
-    background-color: var(--dark);
-    text-align: center;
-    line-height: 80px;
-    position: absolute;
-    top: calc(50vh - 130px);
-    left: calc(50vw - 60px);
 
-  }
-  
-  
-  @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-  }
-  
-  @keyframes heart-beat {
-      55% { background-color: #fff; }
-      60% { background-color: var(--dark); }
-      65% { background-color: #fff; }
-      70% { background-color: var(--dark); }
-      100% { background-color: #fff; }
-  }
-  
   /*==================================loader=======================================*/
   
 
@@ -129,6 +113,7 @@ a{
     font-size: 2em;
     padding: 10px;
 
+
 }
 
 .nav-navigation {
@@ -139,14 +124,78 @@ a{
     align-items: center;
     gap: 20px;
     padding: 15px;
+
   }
 
   .hamb{
       padding-top: 7px;
-  }
+    }
   .invert{
       color: white;
   }
+
+ 
+  
+  .profilePic{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    }
+  .profilePic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+    }
+
+/*_________toggle navbar_________*/
+
+.hide-nav{
+    /* width: 0px; */
+    height: 0px;
+    transition: 0.3s;
+}
+
+.display-none{
+    display: none;
+}
+
+
+
+.toggle-nav{
+    
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dark);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links a{
+    transition: 0.2s ease;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+.nav-links a:hover{
+    font-size: 2em;
+}
+
+
 
 /*________headder_______*/
 .header-section{
@@ -172,7 +221,7 @@ a{
 .text-wrap-header{
     padding: 50px;
     position: relative;
-    top: 40%; 
+    top: 30%; 
     overflow: hidden;
 }
 
@@ -232,15 +281,43 @@ a{
 }
 
 .header-link{
-    overflow: unset;
-    position: relative;
+   
     border:  1px solid white;
     width: fit-content;
-    top: 25px;
     border-radius: 3px;
     padding: 5px;
-
+    
 }
+
+.buttonsMain{
+    display: flex;
+    gap: 10px;
+    overflow: unset;
+    position: relative;
+    padding-top: 30px;
+}
+
+.linksBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 5px;
+}
+.linksBtn2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px 0 3px;
+}
+
+.headerLinkI{
+    position: relative;
+}
+.cvImg{
+    width: 20px;
+    filter: invert(1);
+  }
 
 .side-section {
     width: 25%;
@@ -329,6 +406,23 @@ a{
     top: 0;
     transform-origin: right;
     opacity: 0;
+}
+
+.badges-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.tech-badge{
+    background-color: var(--dark);
+    height: fit-content;
+    width: fit-content;
+    padding: 5px 8px;
+    text-align: center;
+    color: white;
+    border-radius: 2px;
 }
 
 .works-cards{
@@ -811,45 +905,6 @@ footer{
     font-size: smaller;
 }
 
-/*_________toggle navbar_________*/
-
-.hide-nav{
-    display: none;
-}
-
-.display-none{
-    display: none;
-}
-
-.toggle-nav{
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--dark);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-links{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-links a{
-    transition: 0.2s ease;
-    text-decoration: none;
-    color: white;
-    font-size: 1.5em;
-}
-
-.nav-links a:hover{
-    font-size: 2em;
-}
 
 /*_________media queries_________*/
 
