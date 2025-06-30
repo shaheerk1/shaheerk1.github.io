@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe | Senior Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+            color: #1a1a1a;
+        }
+        .project-card {
+            transition: transform 0.2s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-2px);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #1a1a1a;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .hamburger-menu {
+            display: none;
+        }
+        /* #mobileMenu{
+            display: none;
+        } */
+
+        @media (min-width: 768px) {
+
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger-menu {
+                display: block;
+            }
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+
+        
+        .profile-container {
+        position: relative;
+        width: 290px;
+        height: 290px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        min-width: 250px;
+      }
+
+      .image-container {
+        position: relative;
+        width: 290px;
+        height: 290px;
+        margin: 0 auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image-container img {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        object-fit: scale-down;
+        object-position: center;
+      }
+      .image-container svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 290px;
+        height: 290px;
+        animation: rotate 25s linear infinite;
+      }
+
+      body {
+        background-color: "#f5f5f5";
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+   
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold">
+               
+  𝑆ℎ𝑎<span style="vertical-align: -0.16em;">هـ</span>𝑒𝑒
+<!-- 𝒮𝒽𝒶𝒽<span class="inline-block transform -scale-x-100">𝑒</span>𝑒 -->
+
+            </h1>
+            <nav class="flex items-center">
+                <div class="nav-links hidden md:flex space-x-8">
+                    <a href="#work" class="nav-link">Work</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <button class="hamburger-menu md:hidden" id="menuToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu bg-white w-full px-6 py-4 shadow-md" id="mobileMenu">
+            <div class="flex flex-col space-y-4">
+                <a href="#work" class="nav-link py-2">Work</a>
+                <a href="#about" class="nav-link py-2">About</a>
+                <a href="#contact" class="nav-link py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="container mx-auto max-w-4xl flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+
+            <!-- Profile img content -->
+<div class="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+
+            <div class="profile-container">
+        <div class="image-container">
+          <img
+            src="./me.png"
+            alt=""
+          />
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="290px"
+            height="290px"
+            viewBox="0 0 290 290"
+            version="1.1"
+          >
+            <defs>
+              <filter
+                id="alpha"
+                filterUnits="objectBoundingBox"
+                x="0%"
+                y="0%"
+                width="100%"
+                height="100%"
+              >
+                <feColorMatrix
+                  type="matrix"
+                  in="SourceGraphic"
+                  values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+                />
+              </filter>
+              <mask id="mask0">
+                <g filter="url(#alpha)">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="290"
+                    height="290"
+                    style="
+                      fill: rgb(0%, 0%, 0%);
+                      fill-opacity: 0.996078;
+                      stroke: none;
+                    "
+                  />
+                </g>
+              </mask>
+              <clipPath id="clip1">
+                <rect x="0" y="0" width="290" height="290" />
+              </clipPath>
+              <g id="surface5" clip-path="url(#clip1)">
+                <path
+                  style="
+                    stroke: none;
+                    fill-rule: evenodd;
+                    fill: rgb(96.078432%, 96.078432%, 96.078432%);
+                    fill-opacity: 1;
+                  "
+                  d="M 135.886719 -0.136719 C 141.871094 -0.136719 147.855469 -0.136719 153.839844 -0.136719 C 199.472656 3.789062 235.882812 24.011719 263.066406 60.53125 C 278.882812 83.167969 287.8125 108.285156 289.863281 135.886719 C 289.863281 141.871094 289.863281 147.855469 289.863281 153.839844 C 285.9375 199.472656 265.71875 235.882812 229.199219 263.066406 C 206.558594 278.882812 181.441406 287.8125 153.839844 289.863281 C 147.855469 289.863281 141.871094 289.863281 135.886719 289.863281 C 90.253906 285.9375 53.847656 265.71875 26.660156 229.199219 C 10.847656 206.558594 1.914062 181.441406 -0.136719 153.839844 C -0.136719 147.855469 -0.136719 141.871094 -0.136719 135.886719 C 3.789062 90.253906 24.011719 53.847656 60.53125 26.660156 C 83.167969 10.847656 108.285156 1.914062 135.886719 -0.136719 Z M 106.503906 71.683594 C 111.839844 71.546875 117.007812 72.40625 122.011719 74.269531 C 126.425781 76.066406 130.867188 77.789062 135.34375 79.4375 C 141.085938 80.75 146.890625 81.019531 152.753906 80.253906 C 154.042969 80.066406 155.308594 79.796875 156.5625 79.4375 C 161.164062 77.570312 165.789062 75.757812 170.4375 73.996094 C 179.539062 70.648438 188.515625 70.917969 197.367188 74.8125 C 214.257812 82.695312 222.375 95.980469 221.714844 114.667969 C 221.53125 115.953125 221.257812 117.222656 220.902344 118.476562 C 218.617188 125.488281 216.261719 132.46875 213.828125 139.421875 C 212.808594 146.074219 212.992188 152.695312 214.371094 159.28125 C 216.800781 165.757812 219.070312 172.285156 221.171875 178.871094 C 222.625 187.664062 221.082031 195.914062 216.546875 203.625 C 213.351562 209.421875 208.953125 214.09375 203.355469 217.636719 C 197.863281 220.878906 191.96875 222.964844 185.671875 223.894531 C 182.472656 224.148438 179.296875 223.964844 176.148438 223.347656 C 171.628906 222.023438 167.183594 220.480469 162.820312 218.722656 C 155.808594 214.609375 148.28125 213.25 140.238281 214.644531 C 136.375 215.234375 132.65625 216.324219 129.085938 217.90625 C 126.191406 219.492188 123.199219 220.851562 120.109375 221.988281 C 117.367188 222.445312 114.648438 222.992188 111.945312 223.621094 C 101.902344 223.929688 92.835938 221.121094 84.742188 215.1875 C 72.660156 204.695312 68.171875 191.59375 71.277344 175.878906 C 73.148438 170.265625 75.230469 164.734375 77.53125 159.28125 C 80.226562 150.0625 79.773438 140.996094 76.171875 132.078125 C 73.820312 127.101562 72.007812 121.929688 70.730469 116.570312 C 69.089844 97.320312 76.84375 83.308594 93.992188 74.539062 C 98.089844 73.113281 102.261719 72.160156 106.503906 71.683594 Z M 106.503906 71.683594 "
+                />
+              </g>
+            </defs>
+            <g id="surface1">
+              <use xlink:href="#surface5" mask="url(#mask0)" />
+            </g>
+          </svg>
+        </div>
+      </div>
+            <!-- Profile text content -->
+            <div class="div mx-auto max-w-4xl md:text-left order-last md:order-first">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Software Engineer - Fullstack</h1>
+            <p class="text-xl md:text-2xl text-gray-700">I build scalable and maintainable software solutions.</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-16 px-6 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold mb-12">Selected Works</h2>
+            <div id="projects-container" class="grid md:grid-cols-2 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold mb-8">About</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-lg mb-6 leading-relaxed">
+                        With over 12 years of experience in software engineering, I specialize in designing and implementing robust systems that stand the test of time. My approach combines architectural rigor with practical execution.
+                    </p>
+                    <p class="text-lg mb-6 leading-relaxed">
+                        I believe in the power of simplicity and maintainability. Every line of code should serve a clear purpose and be written with future developers in mind.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Core Principles</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="inline-block w-1 h-1 mt-3 mr-2 bg-gray-800 rounded-full"></span>
+                            <span>Systems should be predictable and transparent</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="inline-block w-1 h-1 mt-3 mr-2 bg-gray-800 rounded-full"></span>
+                            <span>Complexity must be justified by tangible benefits</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="inline-block w-1 h-1 mt-3 mr-2 bg-gray-800 rounded-full"></span>
+                            <span>Documentation is part of the implementation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="inline-block w-1 h-1 mt-3 mr-2 bg-gray-800 rounded-full"></span>
+                            <span>Performance is a feature, not an afterthought</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12">Contact</h2>
+            <p class="text-lg mb-8 max-w-2xl">
+                For professional inquiries or collaboration opportunities, please reach out via email or connect through LinkedIn.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="mailto:john.doe@example.com" class="px-6 py-3 border border-gray-800 hover:bg-gray-100 transition-colors">Email</a>
+                <a href="https://linkedin.com" target="_blank" class="px-6 py-3 border border-gray-800 hover:bg-gray-100 transition-colors">LinkedIn</a>
+                <a href="https://github.com" target="_blank" class="px-6 py-3 border border-gray-800 hover:bg-gray-100 transition-colors">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-gray-100">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="mb-4 md:mb-0">© 2023 John Doe. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://github.com" target="_blank" class="hover:text-gray-600">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank" class="hover:text-gray-600">LinkedIn</a>
+                    <a href="mailto:john.doe@example.com" class="hover:text-gray-600">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Projects data
+    let projects = [];
+
+async function loadProjects() {
+    try {
+        const res = await fetch("https://fabulous-cat-e8dd9c.netlify.app/.netlify/functions/projects");
+        if (!res.ok) throw new Error("Failed to fetch");
+
+        projects = await res.json();
+        renderProjects();
+    } catch (error) {
+        console.error("Error loading projects:", error);
+        document.getElementById('projects-container').innerHTML = '<p class="text-red-500">Failed to load projects.</p>';
+    }
+}
+
+        // Render projects
+        function renderProjects() {
+            const container = document.getElementById('projects-container');
+            
+            projects.forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card bg-white border border-gray-200 p-6 rounded-none';
+                
+                // Title
+                const title = document.createElement('h3');
+                title.className = 'text-xl font-bold mb-3';
+                title.textContent = project.title;
+                projectCard.appendChild(title);
+                
+                // Description
+                const description = document.createElement('p');
+                description.className = 'text-gray-700 mb-4 leading-relaxed';
+                description.textContent = project.description;
+                projectCard.appendChild(description);
+                
+                // Images
+                if (project.imageurls.length > 0) {
+                    const imagesContainer = document.createElement('div');
+                    imagesContainer.className = 'mb-4';
+                    
+                    if (project.imageurls.length === 1) {
+                        // Single image
+                        const img = document.createElement('img');
+                        img.src = project.imageurls[0];
+                        img.alt = project.title;
+                        img.className = 'w-full h-auto object-cover mb-2';
+                        imagesContainer.appendChild(img);
+                    } else {
+                        // Multiple images grid
+                        const grid = document.createElement('div');
+                        grid.className = 'grid grid-cols-2 gap-2';
+                        
+                        project.imageurls.slice(0, 4).forEach(url => {
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = project.title;
+                            img.className = 'w-full h-32 object-cover';
+                            grid.appendChild(img);
+                        });
+                        
+                        imagesContainer.appendChild(grid);
+                    }
+                    
+                    projectCard.appendChild(imagesContainer);
+                }
+                
+                // Technologies
+                if (project.technologies.length > 0) {
+                    const techContainer = document.createElement('div');
+                    techContainer.className = 'flex flex-wrap gap-2';
+                    
+                    project.technologies.forEach(tech => {
+                        const techPill = document.createElement('span');
+                        techPill.className = 'px-3 py-1 bg-gray-100 text-sm';
+                        techPill.textContent = tech;
+                        techContainer.appendChild(techPill);
+                    });
+                    
+                    projectCard.appendChild(techContainer);
+                }
+                
+                container.appendChild(projectCard);
+            });
+        }
+
+        // Mobile menu toggle
+        function setupMobileMenu() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        function setupSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        const mobileMenu = document.getElementById('mobileMenu');
+                        mobileMenu.classList.remove('active');
+                        
+                        // Scroll to target
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProjects();
+            setupMobileMenu();
+            setupSmoothScrolling();
+        });
+    </script>
+</body>
+</html>
